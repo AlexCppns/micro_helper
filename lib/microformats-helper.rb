@@ -8,7 +8,8 @@ module MicroformatsHelper
 
     def generate_microformats(container,props={},childs)
 
-      "#{span_outer(container)}#{process(props)}#{childs}#{span_end}".html_safe
+      middle = process(props)
+      "#{span_outer(container)}#{middle}#{childs}#{span_end}".html_safe
     end
 
     def type_url(type)
@@ -38,14 +39,20 @@ module MicroformatsHelper
     end
 
     def process(props)
+      html=""
+      props.each do |key,prop|
 
-      props.each do |key,props|
-        "#{span(key,props[:content])}#{props[:value]}#{span_end}"
+        html+="#{span(key,prop[:content])}#{prop[:value]}#{span_end}"
       end
+      return html
     end
 
     def type_prop(type)
       "itemscope itemtype='#{type_url(type)}'"
     end
   end
+end
+
+ActiveSupport.on_load(:action_view) do
+  include MicroformatsHelper::Helper
 end
