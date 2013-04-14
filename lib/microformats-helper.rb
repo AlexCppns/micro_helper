@@ -6,10 +6,10 @@ module MicroformatsHelper
 
     PROP_TYPE_BASE_URL = "http://data-vocabulary.org/"
 
-    def generate_microformats(container,props={},childs)
+    def generate_microformats(container,props,childs=nil)
 
-      middle = process(props)
-      "#{span_outer(container)}#{middle}#{childs}#{span_end}".html_safe
+
+      "#{span_outer(container)}#{parse_props(props)}#{childs}#{span_end}".html_safe
     end
 
     def type_url(type)
@@ -38,7 +38,7 @@ module MicroformatsHelper
       "content='#{content}'" if content
     end
 
-    def process(props)
+    def parse_props(props)
       html=""
       props.each do |key,prop|
 
