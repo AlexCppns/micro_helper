@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["alexcppns@gmail.com"]
   gem.description   = "Helper for microformats, possibility of nesting."
   gem.summary       = "Helper for microformats, possibility of nesting."
-  gem.homepage      = ""
+  gem.homepage      = "http://github.com/AlexCppns/microformats-helper"
   gem.add_runtime_dependency "activesupport"
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

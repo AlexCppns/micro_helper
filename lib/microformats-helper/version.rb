@@ -1,5 +1,5 @@
 module Microformats
   module Helper
-    VERSION = "0.2.6"
+    VERSION = "0.3.1"
   end
 end
