@@ -1,22 +1,9 @@
 # Microformats::Helper
 
-## Usage:
 
-    generate_microformats(container,props,child)
+## Description
 
-### parameter examples:
-
-    container = { itemprop: nil, itemtype: "Product" }
-
-    props = {
-      name: { value: "Executive Anvil"},
-      brand: { value: "ACME" },
-      category: { content: "Hardware > Tools > Anvils", value: "Anvils"},
-      description: { value: "Sleeker than ACME's Classic Anvil..." }
-
-    }
-
-    child = generate_microformats(child_container,child_props)
+Microformats helper that supports nesting. First commits, not tested yet.
 
 
 ## Installation
@@ -35,7 +22,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+
+    generate_microformats(container,props,child)
+
+### parameter examples:
+
+    container = { itemprop: nil, itemtype: "Product" }
+
+    props = {
+      name: { value: "Executive Anvil"},
+      brand: { value: "ACME" },
+      category: { content: "Hardware > Tools > Anvils", value: "Anvils"},
+      description: { value: "Sleeker than ACME's Classic Anvil..." }
+
+    }
+
+    child = generate_microformats(child_container,child_props)
+
+
+
 
 ## Contributing
 
