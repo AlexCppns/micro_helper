@@ -2,21 +2,21 @@
 
 Usage:
 
-generate_microformats(container,props,child)
+  generate_microformats(container,props,child)
 
 parameter examples:
 
-container = { itemprop: nil, itemtype: "Product" }
+ container = { itemprop: nil, itemtype: "Product" }
 
-props = {
-  name: { value: "Executive Anvil"},
-  brand: { value: "ACME" },
-  category: { content: "Hardware > Tools > Anvils", value: "Anvils"},
-  description: { value: "Sleeker than ACME's Classic Anvil..." }
+ props = {
+   name: { value: "Executive Anvil"},
+   brand: { value: "ACME" },
+   category: { content: "Hardware > Tools > Anvils", value: "Anvils"},
+   description: { value: "Sleeker than ACME's Classic Anvil..." }
 
-}
+ }
 
-child = generate_microformats(child_container,child_props)
+ child = generate_microformats(child_container,child_props)
 
 
 ## Installation
