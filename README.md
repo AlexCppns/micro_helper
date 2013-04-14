@@ -3,7 +3,9 @@
 
 ## Description
 
-Microformats helper that supports nesting. First commits, not tested yet.
+Microformats helper that supports nesting.
+
+First usable iteration is VERSION 0.2.6
 
 
 ## Installation
