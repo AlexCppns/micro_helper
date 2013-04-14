@@ -4,7 +4,7 @@
 
     generate_microformats(container,props,child)
 
-## parameter examples:
+### parameter examples:
 
     container = { itemprop: nil, itemtype: "Product" }
 
