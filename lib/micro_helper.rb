@@ -1,5 +1,5 @@
 require "micro_helper/version"
-require "actionpack"
+
 
 module MicroHelper
 

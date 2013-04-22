@@ -5,6 +5,8 @@
 
 Microformats helper that supports nesting.
 
+Latest stable version is 5.0
+
 First usable iteration is VERSION 0.2.6
 
 
@@ -12,7 +14,7 @@ First usable iteration is VERSION 0.2.6
 
 Add this line to your application's Gemfile:
 
-    gem 'microformats-helper'
+    gem 'micro_helper'
 
 And then execute:
 
@@ -20,29 +22,54 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install microformats-helper
+    $ gem install micro_helper
 
-## Usage
+## Microformat usage
 
+    microformats(container,props,child)
 
-    generate_microformats(container,props,child)
+or
+
+    generate_microformats(container,props,child) [Depreciated]
+
+which gives a hidden span with all the microformat content you need
 
 ### parameter examples:
 
     container = { itemprop: nil, itemtype: "Product" }
 
     props = {
+
       name: { value: "Executive Anvil"},
       brand: { value: "ACME" },
       category: { content: "Hardware > Tools > Anvils", value: "Anvils"},
       description: { value: "Sleeker than ACME's Classic Anvil..." }
-
     }
 
     child = generate_microformats(child_container,child_props)
 
 
+## Usage for open graph
 
+    og_for("type","content")
+
+which gives
+
+    content_for do
+      <meta property="og:type" content="content">
+    end
+
+you can also not use content_for:
+
+    og_tag("type","content")
+
+there is also an optional namespace:
+
+    og_tag("type","content","fb")
+
+which gives
+
+    <meta property="fb:type" content="content">
 
 ## Contributing
 
