@@ -5,9 +5,9 @@
 
 Microformats helper that supports nesting.
 
-Latest stable version is 5.0
+Latest stable version is 0.5.0
 
-Do not use version 4.x
+Do not use version 0.4.x
 
 First usable iteration is VERSION 0.2.6
 
